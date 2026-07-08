@@ -78,6 +78,11 @@ h2 + p{ margin:-6px 0 14px; color:var(--ink-soft); font-size:.92rem; max-width:6
 .offer:nth-child(1) li::before{ background:var(--dot-y); }
 .offer:nth-child(2) li::before{ background:var(--dot-b); }
 .offer:nth-child(3) li::before{ background:var(--dot-p); }
+.offer li ul{ margin:3px 0 2px; padding:0; font-size:.82rem; }
+.offer li li{ padding-left:14px; margin-bottom:1px; }
+.offer li li::before, .offer:nth-child(1) li li::before, .offer:nth-child(2) li li::before,
+.offer:nth-child(3) li li::before{ width:5px; height:5px; top:.55em; border-width:1.5px;
+  background:transparent; }
 
 .tier{ border:2px solid var(--line); border-radius:12px; background:var(--panel); padding:14px 16px; }
 .tier b{ display:block; font-size:1rem; }
@@ -157,10 +162,38 @@ nav.crumbs{ margin:14px 0 0; font-size:.9rem; }
       <h3>On my order, at cost</h3>
       <div class="big">$375 <small>Metal Mini, delivered + set up</small></div>
       <ul>
-        <li><b>Metal Mini</b> — 19″×15″ countertop/stand, 100mm capsules (holds 35)</li>
-        <li><b>One-Layer floor unit</b> — 5′ tall, 100–130mm capsules (holds ~180) — <b>~$650</b></li>
-        <li><b>Double-Deck floor unit</b> — 6′ tall, two independent selections (holds ~190) — <b>~$850</b></li>
-        <li><b>4-Cabinet Double-Deck</b> — four selections in one 3.4′-wide unit — <b>~$1,100</b></li>
+        <li><b>Metal Mini</b> — countertop/stand
+          <ul>
+            <li>19″W × 15″D × 27″H</li>
+            <li>75–100mm capsules</li>
+            <li>1 machine</li>
+            <li><b>$375</b></li>
+          </ul>
+        </li>
+        <li><b>One-Layer floor unit</b>
+          <ul>
+            <li>24″W × 24″D × 61″H</li>
+            <li>100–130mm capsules</li>
+            <li>1 machine</li>
+            <li><b>~$650</b></li>
+          </ul>
+        </li>
+        <li><b>Double-Deck floor unit</b>
+          <ul>
+            <li>22″W × 22″D × 72″H</li>
+            <li>100–130mm capsules</li>
+            <li>2 machines, stacked &amp; independent</li>
+            <li><b>~$850</b></li>
+          </ul>
+        </li>
+        <li><b>4-Cabinet Double-Deck</b>
+          <ul>
+            <li>41″W × 27″D × 63″H</li>
+            <li>100–120mm capsules</li>
+            <li>4 machines, side by side</li>
+            <li><b>~$1,100</b></li>
+          </ul>
+        </li>
         <li>Machine only — capsule toys are optional and priced separately (see the toys column)</li>
         <li>Mini is a firm price; floor units track the final freight quote</li>
         <li><a href="machine-catalog.pdf">View the machine catalog (PDF) →</a></li>
