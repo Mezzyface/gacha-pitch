@@ -130,6 +130,23 @@ footer{ margin-top:40px; border-top:3px solid var(--ink); padding-top:16px;
 .links a{ margin-left:4px; }
 nav.crumbs{ margin:14px 0 0; font-size:.9rem; }
 
+details.sec{ border:2px solid var(--line); border-radius:12px; background:var(--panel);
+  margin:0 0 12px; padding:0 16px; }
+details.sec summary{ font-family:'Honeyblot Caps', "Segoe UI", sans-serif; font-weight:400;
+  text-transform:uppercase; letter-spacing:.1em; font-size:1rem; cursor:pointer;
+  padding:14px 0; list-style:none; display:flex; align-items:center; gap:12px; }
+details.sec summary::-webkit-details-marker{ display:none; }
+details.sec summary::before{ content:""; width:0; height:0; flex:none;
+  border-left:9px solid var(--buff); border-top:6px solid transparent;
+  border-bottom:6px solid transparent; transition:transform .15s ease; }
+details.sec[open] summary::before{ transform:rotate(90deg); }
+details.sec .count{ font-family:'Honey Pigeon', "Segoe UI", sans-serif; text-transform:none;
+  letter-spacing:0; font-size:.8rem; color:var(--ink); background:var(--buff-soft);
+  padding:1px 9px; border-radius:999px; }
+details.sec > p{ margin:0 0 12px; color:var(--ink-soft); font-size:.9rem; max-width:65ch; }
+details.sec .grid{ padding-bottom:16px; }
+@media (prefers-reduced-motion: reduce){ details.sec summary::before{ transition:none; } }
+
 @media print{
   .page{ padding:0; max-width:none; }
   :root{ --panel:#fff; --ground:#fff; }
