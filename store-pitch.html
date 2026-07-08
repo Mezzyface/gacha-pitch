@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Capsule Toy Machine — Store Partnership Offer</title>
+<style>
+  :root{
+    --ink:#232A45; --ink-soft:#5A6180; --ground:#FFFFFF; --panel:#F7F7FA;
+    --line:#E3E4EC; --knob:#D9403C; --knob-soft:#FBEEED;
+    --dot-y:#F0B429; --dot-b:#4A7DDE; --dot-p:#E87EA1;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#EBEDF5; --ink-soft:#A6ACC7; --ground:#191E33; --panel:#222842;
+      --line:#343B5C; --knob:#F0605C; --knob-soft:#3A2A3355; }
+  }
+  :root[data-theme="dark"]{ --ink:#EBEDF5; --ink-soft:#A6ACC7; --ground:#191E33; --panel:#222842;
+      --line:#343B5C; --knob:#F0605C; --knob-soft:#3A2A3355; }
+  :root[data-theme="light"]{ --ink:#232A45; --ink-soft:#5A6180; --ground:#FFFFFF; --panel:#F7F7FA;
+      --line:#E3E4EC; --knob:#D9403C; --knob-soft:#FBEEED; }
+
+  body{ background:var(--ground); color:var(--ink);
+    font-family:"Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height:1.55; margin:0; }
+  .page{ max-width:820px; margin:0 auto; padding:48px 28px 40px; }
+
+  header{ display:flex; align-items:center; justify-content:space-between; gap:16px;
+    border-bottom:3px solid var(--ink); padding-bottom:18px; }
+  .brand{ display:flex; align-items:center; gap:14px; }
+  .knob{ width:46px; height:46px; border-radius:50%; background:var(--knob); position:relative; flex:none; }
+  .knob::after{ content:""; position:absolute; left:50%; top:8px; bottom:8px; width:9px;
+    margin-left:-4.5px; border-radius:5px; background:var(--ground); }
+  .brand h1{ font-size:1.45rem; margin:0; letter-spacing:-.01em; line-height:1.2; text-wrap:balance; }
+  .brand p{ margin:2px 0 0; color:var(--ink-soft); font-size:.85rem; }
+  .caps{ display:flex; gap:6px; }
+  .caps span{ width:14px; height:14px; border-radius:50%; }
+
+  .lede{ font-size:1.12rem; max-width:60ch; margin:26px 0 6px; }
+  .lede strong{ color:var(--knob); }
+  .sub{ color:var(--ink-soft); max-width:65ch; margin:0 0 30px; font-size:.95rem; }
+
+  .eyebrow{ text-transform:uppercase; letter-spacing:.12em; font-size:.72rem; font-weight:600;
+    color:var(--ink-soft); margin:34px 0 12px; }
+
+  .offers{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:640px){ .offers{ grid-template-columns:1fr; } }
+  .offer{ border:1px solid var(--line); border-radius:10px; padding:18px 16px 16px;
+    background:var(--panel); display:flex; flex-direction:column; gap:8px; }
+  .offer.featured{ border:2px solid var(--knob); background:var(--knob-soft); }
+  .offer .tag{ font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--knob); }
+  .offer h3{ margin:0; font-size:1.05rem; line-height:1.25; }
+  .offer .big{ font-size:1.5rem; font-weight:700; letter-spacing:-.01em; }
+  .offer .big small{ font-size:.8rem; font-weight:400; color:var(--ink-soft); }
+  .offer ul{ margin:4px 0 0; padding:0; list-style:none; font-size:.86rem; color:var(--ink-soft); }
+  .offer li{ padding-left:18px; position:relative; margin-bottom:5px; }
+  .offer li::before{ content:""; position:absolute; left:0; top:.42em; width:9px; height:9px; border-radius:50%; }
+  .offer:nth-child(1) li::before{ background:var(--dot-y); }
+  .offer:nth-child(2) li::before{ background:var(--dot-b); }
+  .offer:nth-child(3) li::before{ background:var(--dot-p); }
+
+  table{ border-collapse:collapse; width:100%; font-size:.92rem; font-variant-numeric:tabular-nums; }
+  th,td{ text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); }
+  th{ font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); }
+  td.num, th.num{ text-align:right; }
+  tr.hl td{ font-weight:700; color:var(--knob); }
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px; }
+  .table-note{ font-size:.8rem; color:var(--ink-soft); margin-top:8px; max-width:65ch; }
+
+  .facts{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px 26px; margin:0; padding:0; list-style:none; font-size:.92rem; }
+  @media (max-width:640px){ .facts{ grid-template-columns:1fr; } }
+  .facts li{ padding-left:20px; position:relative; }
+  .facts li::before{ content:""; position:absolute; left:0; top:.42em; width:10px; height:10px;
+    border-radius:50%; background:var(--knob); }
+  .facts b{ display:block; }
+  .facts span{ color:var(--ink-soft); font-size:.86rem; }
+
+  footer{ margin-top:38px; border-top:3px solid var(--ink); padding-top:16px;
+    display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; align-items:center; }
+  .contact b{ font-size:1.02rem; }
+  .contact div{ color:var(--ink-soft); font-size:.9rem; }
+  .cta{ background:var(--knob); color:#fff; border-radius:8px; padding:10px 18px;
+    font-weight:600; font-size:.95rem; }
+
+  @media print{
+    .page{ padding:0; max-width:none; }
+    :root{ --panel:#fff; }
+    .cta{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="brand">
+      <div class="knob" aria-hidden="true"></div>
+      <div>
+        <h1>Put a capsule-toy machine in your store</h1>
+        <p>Gashapon vending · Austin, TX · operated &amp; serviced weekly</p>
+      </div>
+    </div>
+    <div class="caps" aria-hidden="true">
+      <span style="background:var(--dot-y)"></span>
+      <span style="background:var(--dot-b)"></span>
+      <span style="background:var(--dot-p)"></span>
+    </div>
+  </header>
+
+  <p class="lede">Capsule machines turn <strong>2&nbsp;square&nbsp;feet</strong> of your floor into income and a reason for families to walk in — at <strong>zero cost and zero work</strong> for you.</p>
+  <p class="sub">Premium collectible capsule toys (including authentic Japanese gashapon lines) in a compact, quiet, low-power machine. I own it, insure it, stock it, and keep it fresh — you pick the deal that suits you.</p>
+
+  <p class="eyebrow">Three ways to partner — you choose</p>
+  <div class="offers">
+    <div class="offer featured">
+      <span class="tag">Most popular · zero risk</span>
+      <h3>Profit share</h3>
+      <div class="big">25% <small>of every sale</small></div>
+      <ul>
+        <li>No cost to you, ever</li>
+        <li>Paid monthly — QR/tap payments are auto-reported, so your share is auditable to the penny</li>
+        <li>I handle stocking, cleaning, repairs</li>
+        <li>30-day out for either of us</li>
+      </ul>
+    </div>
+    <div class="offer">
+      <span class="tag">Guaranteed income</span>
+      <h3>Space rental</h3>
+      <div class="big">$50–75 <small>/ month, flat</small></div>
+      <ul>
+        <li>Fixed rent for the footprint, paid on the 1st</li>
+        <li>Same full service — you never touch it</li>
+        <li>Rate scales with traffic and machine count</li>
+      </ul>
+    </div>
+    <div class="offer">
+      <span class="tag">Own it outright</span>
+      <h3>Buy a machine</h3>
+      <div class="big">$549 <small>installed</small></div>
+      <ul>
+        <li>New metal machine, custom-branded for your store, starter toys included</li>
+        <li>You keep 100% of every sale</li>
+        <li>Refill packs supplied at wholesale — reorder only when you need</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="eyebrow">What your store earns — profit-share example</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Machine activity</th><th class="num">Sales / month</th><th class="num">Machine gross</th><th class="num">Your 25%</th></tr>
+      <tr><td>Quiet corner</td><td class="num">1 per day</td><td class="num">$180</td><td class="num">$45</td></tr>
+      <tr class="hl"><td>Typical placement</td><td class="num">2–3 per day</td><td class="num">$450</td><td class="num">$113</td></tr>
+      <tr><td>Busy weekend spot</td><td class="num">5 per day</td><td class="num">$900</td><td class="num">$225</td></tr>
+    </table>
+  </div>
+  <p class="table-note">Based on a $6 average vend. Collectible series at anime, boba, and game shops vend at $8–10, which raises every number above.</p>
+
+  <p class="eyebrow">The practical stuff</p>
+  <ul class="facts">
+    <li><b>Small footprint</b><span>19″ wide × 15″ deep countertop or stand unit — fits where a poster rack would.</span></li>
+    <li><b>Quiet &amp; cheap to run</b><span>15 watts — less than a lightbulb. No noise, no mess, no staff time.</span></li>
+    <li><b>Takes coins &amp; phone payments</b><span>Customers pay by quarter or scan a QR code with Apple&nbsp;Pay / Google&nbsp;Pay — no cash, no problem.</span></li>
+    <li><b>Fresh toys every month</b><span>Series rotate every 3–4 weeks so regulars keep coming back to see what's new.</span></li>
+    <li><b>Insured &amp; maintained</b><span>General liability coverage carried; weekly service route; broken machine fixed or removed within days.</span></li>
+    <li><b>Draws foot traffic</b><span>New series are announced to my TikTok audience with your store named as the location.</span></li>
+    <li><b>Simple one-page agreement</b><span>Plain-English terms, 30-day notice either way. No long contracts.</span></li>
+  </ul>
+
+  <footer>
+    <div class="contact">
+      <b>Adam Henderson</b>
+      <div>ozarka30@gmail.com · (___) ___-____ · Austin, TX</div>
+    </div>
+    <div class="cta">Say yes today — machine installed within 2 weeks</div>
+  </footer>
+</div>
+</body>
+</html>

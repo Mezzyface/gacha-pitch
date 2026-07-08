@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gachapon at Mothership — Proposal for Lauren</title>
+<style>
+  :root{
+    --ink:#232A45; --ink-soft:#5A6180; --ground:#FFFFFF; --panel:#F7F7FA;
+    --line:#E3E4EC; --knob:#D9403C; --knob-soft:#FBEEED;
+    --dot-y:#F0B429; --dot-b:#4A7DDE; --dot-p:#E87EA1;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#EBEDF5; --ink-soft:#A6ACC7; --ground:#191E33; --panel:#222842;
+      --line:#343B5C; --knob:#F0605C; --knob-soft:#3A2A3355; }
+  }
+  :root[data-theme="dark"]{ --ink:#EBEDF5; --ink-soft:#A6ACC7; --ground:#191E33; --panel:#222842;
+      --line:#343B5C; --knob:#F0605C; --knob-soft:#3A2A3355; }
+  :root[data-theme="light"]{ --ink:#232A45; --ink-soft:#5A6180; --ground:#FFFFFF; --panel:#F7F7FA;
+      --line:#E3E4EC; --knob:#D9403C; --knob-soft:#FBEEED; }
+
+  body{ background:var(--ground); color:var(--ink);
+    font-family:"Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height:1.55; margin:0; }
+  .page{ max-width:780px; margin:0 auto; padding:48px 28px 40px; }
+
+  header{ border-bottom:3px solid var(--ink); padding-bottom:18px;
+    display:flex; align-items:center; gap:14px; }
+  .knob{ width:46px; height:46px; border-radius:50%; background:var(--knob); position:relative; flex:none; }
+  .knob::after{ content:""; position:absolute; left:50%; top:8px; bottom:8px; width:9px;
+    margin-left:-4.5px; border-radius:5px; background:var(--ground); }
+  header h1{ font-size:1.5rem; margin:0; letter-spacing:-.01em; line-height:1.25; text-wrap:balance; }
+  header p{ margin:2px 0 0; color:var(--ink-soft); font-size:.85rem; }
+
+  .lede{ font-size:1.08rem; max-width:62ch; margin:26px 0 30px; }
+  .lede strong{ color:var(--knob); }
+
+  .eyebrow{ text-transform:uppercase; letter-spacing:.12em; font-size:.72rem; font-weight:600;
+    color:var(--ink-soft); margin:34px 0 12px; }
+
+  .offers{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:640px){ .offers{ grid-template-columns:1fr; } }
+  .offer{ border:1px solid var(--line); border-radius:10px; padding:18px 16px 16px;
+    background:var(--panel); display:flex; flex-direction:column; gap:8px; }
+  .offer.featured{ border:2px solid var(--knob); background:var(--knob-soft); }
+  .offer .tag{ font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--knob); }
+  .offer h3{ margin:0; font-size:1.05rem; line-height:1.25; }
+  .offer .big{ font-size:1.4rem; font-weight:700; letter-spacing:-.01em; }
+  .offer .big small{ font-size:.8rem; font-weight:400; color:var(--ink-soft); }
+  .offer ul{ margin:4px 0 0; padding:0; list-style:none; font-size:.86rem; color:var(--ink-soft); }
+  .offer li{ padding-left:18px; position:relative; margin-bottom:5px; }
+  .offer li::before{ content:""; position:absolute; left:0; top:.42em; width:9px; height:9px; border-radius:50%; }
+  .offer:nth-child(1) li::before{ background:var(--dot-y); }
+  .offer:nth-child(2) li::before{ background:var(--dot-b); }
+  .offer:nth-child(3) li::before{ background:var(--dot-p); }
+
+  table{ border-collapse:collapse; width:100%; font-size:.92rem; font-variant-numeric:tabular-nums; }
+  th,td{ text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); }
+  th{ font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); }
+  td.num, th.num{ text-align:right; }
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px; }
+  .table-note{ font-size:.8rem; color:var(--ink-soft); margin-top:8px; max-width:65ch; }
+
+  .facts{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px 26px; margin:0; padding:0; list-style:none; font-size:.92rem; }
+  @media (max-width:640px){ .facts{ grid-template-columns:1fr; } }
+  .facts li{ padding-left:20px; position:relative; }
+  .facts li::before{ content:""; position:absolute; left:0; top:.42em; width:10px; height:10px;
+    border-radius:50%; background:var(--knob); }
+  .facts b{ display:block; }
+  .facts span{ color:var(--ink-soft); font-size:.86rem; }
+
+  footer{ margin-top:38px; border-top:3px solid var(--ink); padding-top:16px;
+    display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; align-items:center; }
+  .contact b{ font-size:1.02rem; }
+  .contact div{ color:var(--ink-soft); font-size:.9rem; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="knob" aria-hidden="true"></div>
+    <div>
+      <h1>Gachapon at Mothership</h1>
+      <p>Prepared for Lauren · Mothership Books &amp; Games, Austin · July 2026</p>
+    </div>
+  </header>
+
+  <p class="lede">I'm placing a machine order with the manufacturer (the catalog I sent) in the next couple weeks. Mothership can jump on it <strong>any way you want</strong> — own machines outright, or let me run one in the store with zero cost or work on your end. Everything lands in ~6–7 weeks and I deliver and set up personally.</p>
+
+  <p class="eyebrow">Pick whatever suits Mothership</p>
+  <div class="offers">
+    <div class="offer">
+      <span class="tag">Own it</span>
+      <h3>Buy machines on my order</h3>
+      <div class="big">$375 <small>mini, delivered + set up</small></div>
+      <ul>
+        <li>Compact metal machine (19″×15″ countertop/stand, 100mm capsules) — that's my landed cost plus delivery, not retail</li>
+        <li>Floor units on the same order: single-deck ~$650, double-deck ~$850 delivered (final price tracks the freight quote)</li>
+        <li>Custom Mothership branding from the factory — logo on the machine, free</li>
+        <li>You keep 100% of every vend</li>
+      </ul>
+    </div>
+    <div class="offer featured">
+      <span class="tag">Zero risk · zero work</span>
+      <h3>I place &amp; run one</h3>
+      <div class="big">25% <small>of gross to Mothership</small></div>
+      <ul>
+        <li>No cost to you — I own, insure, stock, and service it weekly</li>
+        <li>QR/tap payments are auto-tracked, so your cut is auditable to the penny</li>
+        <li>Series rotate every 3–4 weeks</li>
+        <li>30-day out, no strings — or flat $50–75/mo rent instead of the % if you'd rather have guaranteed money</li>
+      </ul>
+    </div>
+    <div class="offer">
+      <span class="tag">The toys</span>
+      <h3>Capsule supply, either way</h3>
+      <div class="big">$6–10 <small>typical vend price</small></div>
+      <ul>
+        <li>If your distros carry capsule toys — great, stock whatever you want in your machines</li>
+        <li>Otherwise I supply: authentic Japanese gashapon (Bandai, Takara Tomy, Kitan Club…) at ~$4/capsule wholesale — vends at $8–10 to a collector crowd</li>
+        <li>Plus value lines (~$2.50–3/capsule) that vend at $5–6 for the kids</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="eyebrow">What the numbers look like in a game store</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Scenario</th><th class="num">Vends / mo</th><th class="num">@ $8 avg</th><th class="num">Your 25% (placement)</th><th class="num">Your profit (owned)*</th></tr>
+      <tr><td>Slow month</td><td class="num">40</td><td class="num">$320</td><td class="num">$80</td><td class="num">~$160</td></tr>
+      <tr><td>Steady</td><td class="num">75</td><td class="num">$600</td><td class="num">$150</td><td class="num">~$300</td></tr>
+      <tr><td>FNM / release weekends</td><td class="num">150</td><td class="num">$1,200</td><td class="num">$300</td><td class="num">~$600</td></tr>
+    </table>
+  </div>
+  <p class="table-note">*Owned = you stock it yourself; assumes ~50% product cost at $8 vend with $4 wholesale capsules. A mini pays for itself in ~2 steady months. Your crowd is exactly who pays $8–10 for authentic Japanese blind-capsule collectibles.</p>
+
+  <p class="eyebrow">The practical stuff</p>
+  <ul class="facts">
+    <li><b>Tiny footprint</b><span>Mini is 19″ × 15″ — register counter or an endcap. Floor units are ~2 sq ft.</span></li>
+    <li><b>15 watts, silent</b><span>Standard outlet, no staff time, no mess.</span></li>
+    <li><b>Coins + phone payments</b><span>Quarter mech plus a QR code for Apple/Google Pay.</span></li>
+    <li><b>I'm 15 minutes away</b><span>Anything breaks, I fix or swap it same week. My cell, not a support line.</span></li>
+    <li><b>TikTok cross-promo</b><span>I stream capsule openings — new series announcements name Mothership as the place to pull them.</span></li>
+    <li><b>Timeline</b><span>Order closes in ~2 weeks → machines land ~6–7 weeks later → I deliver, brand, and fill same day.</span></li>
+  </ul>
+
+  <footer>
+    <div class="contact">
+      <b>Adam Henderson</b>
+      <div>ozarka30@gmail.com · Discord: ozarka30 · Austin, TX</div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
